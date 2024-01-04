@@ -155,8 +155,35 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "workbench.settings.applyToAllProfiles": ["editor.formatOnSave"],
-    // Remove bottom status bar
+
     "workbench.statusBar.visible": false,
     // Remove position indicator in the editor's scrollbar
-    "editor.hideCursorInOverviewRuler": true
+    "editor.hideCursorInOverviewRuler": true,
+    // Remove minimap
+    // Move tabs to be in a single line with window controls
+    "window.titleBarStyle": "native",
+    "apc.electron": {
+      "titleBarStyle": "hiddenInset",
+      "trafficLightPosition": {
+        "x": 11,
+        "y": 10
+      }
+    },
+    "apc.header": {
+      "height": 36
+    },
+    // Remove unnecessary controls from primary bar and tabs list
+    "apc.stylesheet": {
+      ".title-label > h2": "display: none", // Remove primary side bar title
+      ".title-actions": "display: none", // Remove primary side bar action icons
+      ".editor-actions": "display: none", // Remove editor action icons
+      ".nosidebar .inline-tabs-placeholder": "width: 75px" // Align tabs to not overlap window controls when primary bar is hidden
+    },
+    "apc.parts.font.family": {
+      "sidebar": "Geist Mono",
+      "titlebar": "Geist Mono",
+      "activityBar": "Geist Mono"
+    },
+    "workbench.activityBar.location": "hidden",
+    "git.autofetch": true
 }
